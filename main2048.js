@@ -40,7 +40,7 @@ function init()
 
 function updateBoardView()
 {
-    $(".number-cell").remove();
+    $("number-cell").remove();
 
     for(var i=0;i<4;i++)
     {
@@ -63,6 +63,7 @@ function updateBoardView()
                 theNumberCell.css('left',getPosLeft(i,j));
                 theNumberCell.css('background-color',getNumberBackgroundColor(board[i][j]));
                 theNumberCell.css('color',getNumberColor(board[i][j]));
+                theNumberCell.text(board[i][j]);
             }
 
         }
@@ -90,6 +91,7 @@ function generateOneNumber()
     //随机一个数字
     var randNumber=Math.random()<0.5?2:4;
     //在随机位置显示随机数字
-    showNumberWithAnimation(i,j,randNumber);
+    board[randx][randy]=randNumber;
+    showNumberWithAnimation(randx,randy,randNumber);
     return true;
 }
