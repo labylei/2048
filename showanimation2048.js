@@ -11,5 +11,32 @@ function showNumberWithAnimation(i,j,randNumber)
         height:"100px",
         top:getPosTop(i,j),
         left:getPosLeft(i,j)
-    },50);
+    },100);
+}
+
+function showMoveAnimation(fromx,fromy,tox,toy)
+{
+    var numberCell=$("#number-cell-"+fromx+"-"+fromy);
+
+    numberCell.animate({
+        top:getPosTop(tox,toy),
+        left:getPosLeft(tox,toy)
+    },200);
+} 
+
+function updateScore(score)
+{
+    $('#score').text(score);
+    $('#score').animate({
+        fontSize:"40px"
+    },200)
+    $('#score').animate({
+        fontSize:"30px"
+    })
+}
+
+function updateTime(time)
+{
+    $("#time").text(time);
+
 }

@@ -13,11 +13,15 @@
     <body>
         <header>
             <h1>2048</h1>
-            <a href="javascript:newgame():" id="newgamebutton">New Game</a>
-            <p>score: <span id="score">0</span></p>
+            <a href="javascript:newgame();" id="newgamebutton">New Game</a>
+            <div id="top">
+                <p>score: <span id="score">0</span></p>
+                <p>time: <span id="time">0</span></p>
+            </div>
+            
         </header>
 
-        <<div id="grid-container">
+        <div id="grid-container">
             
             <div class="grid-cell" id="grid-cell-0-0"></div>
             <div class="grid-cell" id="grid-cell-0-1"></div>
